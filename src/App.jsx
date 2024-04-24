@@ -6,13 +6,13 @@ import logo from "./assets/logosimpson.png";
 
 function App() {
   return (
-  
     <Container className="text-center my-5">
       <img src={logo} alt="Logo de los simpson" className="w-50" />
       <Frase></Frase>
-      <Button variant="warning" className="mb-5">Obtener frase</Button>
+      <Button variant="warning" className="mb-5">
+        Obtener frase
+      </Button>
     </Container>
-   
   );
 }
 
