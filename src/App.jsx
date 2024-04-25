@@ -24,6 +24,7 @@ function App() {
       //almacenar la respuesta en el state
       if (respuesta.status === 200) {
         const datos = await respuesta.json();
+        console.log(datos);
         console.log(datos[0]);
         setFrasePersonaje(datos[0]);
       }
@@ -36,7 +37,7 @@ function App() {
   return (
     <Container className="text-center my-5">
       <img src={logo} alt="Logo de los simpson" className="w-50" />
-      <Frase></Frase>
+      <Frase frasePersonaje={frasePersonaje}></Frase>
       <Button variant="warning" className="mb-5">
         Obtener frase
       </Button>
