@@ -20,7 +20,24 @@ function App() {
     //pedir la frase a la API
     const respuesta = await fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
     //Almacenar la respuesta en el state
-    console.log(respuesta);
+    if(respuesta.status === 200){
+      const datos = await respuesta.json()
+      console.log(datos[0]);
+      setFrasePersonaje(datos[0])
+    }
+    try{
+      //pedir la frase a la API
+    const respuesta = await fetch("https://thesimpsonsquoteapi.glitch.me/quotes")
+    //Almacenar la respuesta en el state
+    if(respuesta.status === 200){
+      const datos = await respuesta.json()
+      console.log(datos[0]);
+      setFrasePersonaje(datos[0])
+    }
+    }catch(error){
+      console.error(error);
+      //Agregar un mensaje para el usuario final
+    }
   }
 
   return (
