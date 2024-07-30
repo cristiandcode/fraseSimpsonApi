@@ -44,7 +44,7 @@ function App() {
     <Container className="text-center my-5">
       <img src={logo} alt="Logo de los simpson" className="w-50" />
       <Frase frasePersonajeProps={frasePersonaje}></Frase>
-      <Button variant="warning" className="mb-5">
+      <Button variant="warning" className="mb-5"onClick={consultarApi}>
         Obtener frase
       </Button>
     </Container>
