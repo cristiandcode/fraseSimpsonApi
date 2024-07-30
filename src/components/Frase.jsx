@@ -1,23 +1,23 @@
 import { Card } from "react-bootstrap";
 
-const Frase = ({ }) => {
+const Frase = ({ frasePersonajeProps}) => {
   return (
     <section className="my-5">
-      <h2>Nelson Muntz</h2>
+      <h2>{frasePersonajeProps.character}</h2>
       <hr />
       <img
         className="mb-3"
-        src="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FNelsonMuntz.png?1497567511185"
-        alt="Nelson Muntz"
+        src={frasePersonajeProps.image}
+        alt={frasePersonajeProps.character}
       />
       <Card>
         <Card.Body>
           <figure>
             <blockquote className="blockquote">
-              <p>Frank Grimes in The Simpsons</p>
+              <p>{frasePersonajeProps.quote}</p>
             </blockquote>
             <figcaption className="blockquote-footer">
-              Nelson Muntz in
+            {frasePersonajeProps.character} in
               <cite title="Source Title">The Simpsons</cite>
             </figcaption>
           </figure>
